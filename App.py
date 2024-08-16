@@ -5,11 +5,11 @@ class Backend:
 
     def add_user(self, name, age):
         if self._validate_user(name, age):
-            user = {"name": name, "age": age}
+            user = {"name": name, "idade": age}
             self.users.append(user)
-            return "Usuário adicionado com sucesso!"
+            return "User adicionado com sucesso!"
         else:
-            return "Dados inválidos."
+            return "Dado inválido."
 
     def _validate_user(self, name, age):
         return isinstance(name, str) and isinstance(age, int) and age > 0
